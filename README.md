@@ -2,8 +2,6 @@
 
 A Streamlit app that forecasts a company's next-year return on assets (ROA) using regression models built with **forward selection**, one per GICS industry group (2010, 2550, 3520, 4510, 4530). Type a stock ticker and the app pulls the latest annual financial statements from Yahoo Finance (via `yfinance`), averages each ratio over the most recent (up to) 5 fiscal years, and forecasts ROA for the next fiscal year with a 95% range of forecast ± 2 standard errors.
 
-![App screenshot](app_screenshot.png)
-
 ## Repository layout
 
 ```
