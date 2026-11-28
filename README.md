@@ -2,23 +2,6 @@
 
 A Streamlit app that predicts a company's next-year return on assets (ROA) using regression models built with **forward selection**, one per GICS industry group (2010, 2550, 3520, 4510, 4530). Enter a company's FY2025 financials (plus the five years before) to predict its 2026 ROA, with a ± prediction interval and a confidence interval.
 
-![App screenshot](app_screenshot.png)
-
-## Repository layout
-
-```
-app.py                          Streamlit app (entry point)
-requirements.txt                Packages for Streamlit Community Cloud
-data/complete_companies_2014-2025.xlsx   Training data (Compustat annual, 2014-2025)
-training/
-  roa_model.py                  Variable construction, forward selection, reporting
-  train_2010.py ... train_4530.py   One training script per industry group
-  requirements-training.txt     Extra packages needed to run training (statsmodels, scipy, ...)
-  results/
-    results_<group>.md          Step-by-step forward selection report (renders on GitHub)
-    model_<group>.json          Final coefficients, covariance matrix, bounds (used by app.py)
-```
-
 ## Method
 
 **Target:** ROA in year t+1, where ROA = net income / average total assets.
