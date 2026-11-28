@@ -62,18 +62,3 @@ The app shows one sentence and a range bar, for example:
 | 3520 | 0.199 | ± 39.9% |
 | 4510 | 0.105 | ± 21.0% |
 | 4530 | 0.083 | ± 16.7% |
-
-## Run the app
-
-Locally: `pip install -r requirements.txt` then `streamlit run app.py`.
-
-Streamlit Community Cloud: push this repo to GitHub, go to share.streamlit.io, choose **Create app**, pick the repo and branch, and set the main file to `app.py`.
-
-## Re-run training
-
-```
-pip install -r training/requirements-training.txt
-python training/train_2010.py      # likewise 2550, 3520, 4510, 4530
-```
-
-Then copy the new numbers from `training/results/model_<group>.json` into the `MODELS` dictionary in `app.py`.
